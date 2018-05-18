@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputprefix="lights_out">
+
+	<!--  Project description -->
+	<name>Lights Out</name>
+	<author>Jan Kubica</author>
+	<authoremail>xkubic39@stud.fit.vutbr.cz</authoremail>
+	<revision>1</revision>
+	<description>Jednoduchá hra Lights Out na VGA výstup. Je napsaná pouze v FPGA, bez použití MCU</description>
+
+	<!--  MCU part -->
+	<mcu>
+	    <file>main.c</file>
+	</mcu>
+
+	<!-- FPGA part -->
+	<fpga architecture="pc" dcmfrequency="25MHz">
+        <include>fpga/ctrls/vga/package.xml</include>
+        <include>fpga/ctrls/keyboard/package.xml</include>
+
+	    <file>top.vhd</file>
+	    <file>bcd.vhd</file>
+	    <file>cell.vhd</file>
+	    <file>m_pack.vhd</file>
+	    <file>modulo.vhd</file>
+	</fpga>
+
+
+</project>

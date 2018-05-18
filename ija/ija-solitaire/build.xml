@@ -1,0 +1,54 @@
+<!-- 
+Project to Java Programming Language - 2016/2017
+
+Project: Solitaire game
+Date: May 2017
+
+author: Juraj Kubis
+author: Jan Kubica
+-->
+
+<project>
+  <target name="clean">
+    <delete dir="build"/>
+    <delete dir="dest-client"/>
+    <delete dir="doc"/>
+    <mkdir dir="build"/>
+    <mkdir dir="dest-client"/>
+    <mkdir dir="doc"/>
+  </target>
+  
+  <target name="build" depends="doc">
+    <mkdir dir="build"/>
+    <javac srcdir="src" destdir="build" includeantruntime="false"/>
+  </target>
+
+  <target name="get_lib">
+    <exec executable="/bin/sh">
+      <arg value="./lib/get-libs.sh"/>
+    </exec>
+  </target>
+
+  <target name="compile" depends="build, get_lib">
+    <mkdir dir="dest-client"/>
+    <jar destfile = "dest-client/ija-client.jar" basedir = "build"  compress="true">
+      <fileset dir="src" includes="**/*.fxml" />
+      <fileset dir="lib" includes="**/*.png" />
+      <manifest>
+        <attribute name = "Main-Class" value = "gui.Main"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="run" depends="compile">
+    <java jar="dest-client/ija-client.jar" fork="true"/>
+  </target>
+
+  <target name="doc">
+    <javadoc encoding="UTF-8" charset="UTF-8" docencoding="UTF-8" sourcepath="src" destdir="doc">
+      <fileset dir="src">
+        <include name="**.java" />
+      </fileset>
+    </javadoc>
+  </target>
+</project>

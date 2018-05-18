@@ -1,0 +1,7 @@
+INFILE=C:\FitkitSVN\apps\games\lights_out\build\fpga\lights_out.par.ncd
+OUTFILE=C:\FitkitSVN\apps\games\lights_out\build\lights_out.bit
+FAMILY=Spartan3
+PART=xc3s50-4pq208
+WORKINGDIR=C:\FitkitSVN\apps\games\lights_out\build
+LICENSE=WebPack
+USER_INFO=174678435_176159374_0_575

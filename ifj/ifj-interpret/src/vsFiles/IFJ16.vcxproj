@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{55AFB730-298C-479C-9657-BDBFF2A37CE9}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>IFJ16</RootNamespace>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="1==1">
+    <RemoteBuildCommandLine>cd $(RemoteProjectDir); make</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>cd $(RemoteProjectDir); make clean; make</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>cd $(RemoteProjectDir); make clean</RemoteCleanCommandLine>
+    <RemoteBuildOutputs>ifj16</RemoteBuildOutputs>
+    <RemoteCCompileToolExe>gcc</RemoteCCompileToolExe>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\binaryTree-test.c" />
+    <ClCompile Include="..\build_in.c" />
+    <ClCompile Include="..\expr_parser.c" />
+    <ClCompile Include="..\expr_parser_test.c" />
+    <ClCompile Include="..\find-test.c" />
+    <ClCompile Include="..\gc.c" />
+    <ClCompile Include="..\ial.c" />
+    <ClCompile Include="..\interpret.c" />
+    <ClCompile Include="..\main.c" />
+    <ClCompile Include="..\scanner.c" />
+    <ClCompile Include="..\semantic_check.c" />
+    <ClCompile Include="..\shellSort-test.c" />
+    <ClCompile Include="..\syntax_analysis.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\build_in.h" />
+    <ClInclude Include="..\expr_parser.h" />
+    <ClInclude Include="..\ast.h" />
+    <ClInclude Include="..\gc.h" />
+    <ClInclude Include="..\hacks.h" />
+    <ClInclude Include="..\ial.h" />
+    <ClInclude Include="..\interpret.h" />
+    <ClInclude Include="..\return_codes.h" />
+    <ClInclude Include="..\scanner.h" />
+    <ClInclude Include="..\semantic_check.h" />
+    <ClInclude Include="..\syntax_analysis.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Makefile">
+      <RemoteCopyFile>true</RemoteCopyFile>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

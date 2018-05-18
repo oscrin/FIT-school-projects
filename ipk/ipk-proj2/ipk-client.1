@@ -1,0 +1,67 @@
+.\" Manual for ipk-client
+.\" Contact xkubic39@stud.fit.vutbr.cz to correct errors.
+.TH man 1 "23 April 2017" "version 1.0" "ipk-client man page"
+.SH NAME
+.B ipk-client 
+\- mathematical client for solving simple tasks
+.SH SYNOPSIS
+.B ipk-client 
+.I [IPv4 or IPv6 address]
+.SH DESCRIPTION
+.B ipk-client 
+is an application for simple communication between client and server.
+Communication begins with start-up message, which is specified in strict format like 
+.B "HELLO [login_in_md5]\\n".
+For 
+.I md5 hash encryption 
+are used libraries from 
+.B openssl 
+and the basic login is set in the top of the source code.
+Server can respond with simple mathematical task like 
+.B "SOLVE 1 + 1\\n"
+or exiting communication 
+.B "BYE [secret]\\n".
+Subsequentally client respond with messages 
+.B "RESULT [number]\\n" 
+(with two decimal digits) or 
+.B "RESULT ERROR\\n" 
+for nonexistent result.
+Incorrectly specified questions are 
+.I ignored by client.
+Port for communication is set to 
+.B 55555.
+
+.PP
+
+It is 
+.B forbidden 
+to divide by
+.I zero 
+and write numbers in mode 
+.I 0006, 01 
+eg.
+.B Spaces 
+must be strictly given like "1 + 1". Every command is verified according to specified function.
+Maximal lenght of recieving buffer is set to 1024 B.
+
+.SH OPTIONS
+The 
+.B ipk-client 
+does not take any options. However, you can supply 
+.B IPv4 or IPv6 address.
+.SH SEE ALSO
+.I socket(7), 
+.I send(2), 
+.I recv(2) 
+.SH BUGS
+Occasionally some problems with 
+.I multiple sends from server 
+matching in 
+.B
+one revieved buffer.
+It is unable to match for example BYE message after ignored message beacuse of missing "\\n" between.
+End of lines must be 
+.B strictly specified!
+No overflow check is handled.
+.SH AUTHOR
+Made by Jan Kubica (xkubic39@stud.fit.vutbr.cz)

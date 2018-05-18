@@ -1,0 +1,56 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[left=2cm,text={17cm, 24cm},top=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{times}
+\usepackage{marvosym}
+
+\author{Jan Kubica}
+
+\providecommand{\uv}[1]{\quotedblbase #1\textquotedblleft}
+
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\textsc{\Huge Vysoké učení technibcké v~Brně} \\[8pt]
+			\textsc{\huge Fakulta informačních technologií} \\[16pt]
+			\vspace{\stretch{0.382}}
+			{\LARGE Typografie a publikování -- 4. projekt} \\[6pt]
+			{\Huge Bibliografické citace}
+			\vspace{\stretch{0.618}}
+		\end{center}
+		{\Large \today \hfill Jan Kubica}
+	\end{titlepage}
+
+
+\section{Historie a vývoj písma}
+
+Písmo, jak jej užíváme dnes, sahá až do historie okolo 5000 let př.\,n.\,l. Mezi nejstarší se řadí tzv. \textbf{piktogramy}, nebo-li znaky znázorňující popisované věci obrazově. Postupem času dospěla každá z~kultur do různého stupně vývoje. V~současnosti můžeme písmo rozdělit do 4 základních skupin: \emph{latinkové}, \emph{nelatinkové pravosměrné}, \emph{nelatinkové
+levosměrné} a \emph{ostatní}.
+\cite{wiki:pismo}\cite{znak_sady}
+
+\section{Rodina písma}
+Rodinou písma označujeme skupinu několika řezů vytvořených z~jednoho typu písma. Řez písma je tak určitá kresebná varianta základního typu písma, kterou používáme pro zvýrazňování jednotlivých slov nebo delšího textu. Jedná se např. o~\textbf{tučné písmo} (v~textovém editoru \LaTeX\ pomocí příkazu \verb|\textbf{}|) nebo \linebreak \emph{kurzívu} (\verb|\emph{}|).\cite{manual}\cite{tex_companion}
+
+\subsection{Známé rodiny písem}
+Jedny z~světově nejpoužívanějších rodin písem jsou \texttt{Times New Roman}, \texttt{Arial} a \texttt{Helvetica}.\linebreak \texttt{Times New Roman} je obecně základním \emph{serifovým} (patkovým) písmem operačního systému Windows \linebreak od~Microsoftu. \texttt{Helvetica} a \texttt{Arial} jsou pak typickými \emph{sans-serifovými} (bezpatkovými) písmy.\cite{typomil}
+
+\subsection{Další populární písma}
+Jak zmiňuje časopis Type, za povšimnutí stojí i písmo nazvané \textbf{Windsor}. Toto písmo původně z~Anglie z~roku 1905 se hodí především jako tvarově i barevně velmi výrazný titulek. Je zajímavé zejména díky své kresební zvláštnosti, kdy k~osobitým prvkům patří výrazně sešikmené serify u~některých verzálek.\cite{font_2012}
+
+\subsection{Současná tvorba}
+Jedním z~nejúspěšnějších projektů v~České republice jsou písma Vojtěcha Říhy, který za svůj soubor písem získal ocenění v~prestižní soutěži \uv{Graduation Projects 2015}. Vojtěch se tak rozhodl založit vlastní písmolijnu \textbf{Superior Type} a v~současnosti poskytuje 3 písma: \emph{Hrot}, \emph{Kunda Book} a \emph{Vegan Sans}.\cite{font_2016}
+
+\section{Výhody a nevýhody počítačového písma}
+
+Počítačové písmo se od tiskového písma předchozích staletí v~mnohém liší. Každý znak je dnes pouze matematickým zápisem jedniček a nul a písmo tak ztratilo náhodné chybičky v~kresbě, která činila tištěné texty lidštějšími a přívětivějšími. Na druhou stranu v~době klasického knihtisku byly používány na každou velikost písma předem určené a stylizované raznice. Větší písma měla jiný vzhled, aby proporcionálně působila přirozeně a písmo tak bylo přesně předurčeno pro své použití. Počítačová technologie tuto závislost zcela odstranila. Typograf tudíž najednou může použít plakátové písmo na vizitce a knižní antikvu na billboardu.\cite{zivy_font}
+
+
+\pagebreak
+
+\bibliographystyle{czechiso}
+\bibliography{proj4}
+
+
+\end{document}

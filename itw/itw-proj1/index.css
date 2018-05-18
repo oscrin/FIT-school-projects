@@ -1,0 +1,243 @@
+﻿header {
+	margin : 0;
+	padding : 0;
+	height: 200px;
+	max-width: 1200px;
+	min-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
+body {
+	margin : 0;
+	padding : 0;
+	font-family : Arial, sans-serif;
+	font-size: 12pt;
+	line-height: 1.5;
+
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#bfe7f0, #F2F2F2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#bfe7f0, #F2F2F2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#bfe7f0, #F2F2F2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#bfe7f0, #F2F2F2); /* Standard syntax */
+
+}
+
+#topbar {
+	position: relative;
+	background-color : #323232;
+	height: 70px;
+	width: 100%;
+	border-bottom: solid #F0F0F0 10px;
+	z-index: 0;
+}
+#topmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    overflow: hidden;
+    background-color: #333;
+}
+#topmenu li {
+    float: right;
+}
+#topmenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 23px 40px;
+    text-decoration: none;
+}
+
+#topmenu li a:hover:not(.active) {
+    background-color: #111;
+}
+
+#topmenu .active {
+    background-color: #7F0000;
+}
+
+#logo {
+	float: right;
+	margin-top: 30px; 
+	margin-right: 30px; 
+	height: 100px;
+	width:250px;
+	line-height: 50px;
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	background-size: 250px 100px;
+	z-index: 1;
+}
+#logo a {
+	height: 100px;
+	width:250px;
+	float: right;
+	font-size: 42pt;
+	text-align: center;
+	z-index: 1;
+}
+#logo span {
+	visibility: hidden;
+}
+#menubar {
+	margin-top: 222px; 
+	float: right;
+	clear:both;
+}
+#menubar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+#menubar li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+#menubar li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+h3 {
+	font-size: 18pt;
+}
+#page {
+	margin : 0;
+	padding : 0;
+	height: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 350px;
+}
+
+.all {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#uvod{
+	margin-right: 220px;
+	margin-left: 10px;
+}
+
+#uvod p {
+	text-align: justify;
+}
+
+#novinky {
+	margin-left: auto;
+	margin-right: auto; 
+	width: 1150px;
+}
+
+#left {
+	float: left;
+	background-color: #ebf3fd;
+	padding: 10px;
+}
+
+#right {
+	float: right;
+	background-color: #ebf3fd;
+	padding: 10px;
+}
+#header img {
+	position: absolute;
+	top: 70px;
+	max-width: 1200px;
+	z-index: -1;
+}
+
+footer {
+	background-color : #323232;
+}
+
+ul.menu {
+	float: right;
+	margin: 0;
+	margin-top: 8px;
+	margin-right: 30px;
+}
+#footer li {
+	display: inline-block;
+	text-align : center;
+	color: white;
+	line-height: 10px;
+}
+.menu a {
+	display: inline-block;
+	color: #E5E5E5;
+	width : 100px;
+}
+div.copy {
+	padding: 8px;
+	color: white;
+}
+#obsah h2 {
+	margin: 25px;
+}
+
+#obsah img {
+	height: 250px;
+	width: 500px;
+	padding-left: 65px;
+}
+
+#obsah p {
+	display: inline-block;
+	width: 500px;
+	padding-left: 65px;
+	font-weight: bold;
+	font-size: 15pt;
+	text-align: center;
+}
+
+#cenik img {
+	padding-left: 250px;
+	width: 700px;
+}
+
+#cenik h2 {
+	margin-left: 25px; 
+}
+
+#sluzby h3 {
+	margin-left: 10px; 
+}
+
+#sluzby p {
+	margin-left: 10px; 
+}
+#auta h3 {
+	margin-left: 25px; 
+}
+
+#auta img {
+ 	height: 250px;
+ 	padding-left: 70px;
+ 	display: inline-block;
+}
+#dilna h3 {
+	margin-left: 25px; 
+}
+
+#dilna img {
+	padding-left: 300px;
+	height: 350px;
+}
+#viz h3 {
+	margin-left: 25px; 
+}
